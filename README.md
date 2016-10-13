@@ -1,0 +1,59 @@
+###Navigation in command mode
+- `:h search-term`, search for help
+- `:db`, or `:q` to exit help doc
+- `j`, move down a line
+- `G`, go to bottom of file
+- `gg`, go to the top of the file
+- `12G`, go to line 12
+- `H J K L`, left, down, up and right
+- `3j`, move down 3 lines
+- `i`, insert text before cursor
+- `I`, insert mode at the start of line
+- `a`, append text after cursor
+- `o`, insert a blank line below and go into insert mode
+- `f{`, find next opening bracket
+- `d`, delete character
+- `d$`, delete through line
+- `d2w`, means delete two words
+- `c2/myname<Return>`, change text from cursor through next two occurrences of "myname"
+- `w`, move forward by one word
+- `3w`, forward by 3 words
+- `W`, treating 'object.property' as one word and move forward
+- `b`, move backward by one word
+- `q!`, force quit without confirmation
+- `:e <filename>`, edit file
+- `6l`, forward 6 letters
+- `2j`, down 2 lines
+- `fN`, jump forward to first 'N'
+- `3fN`, jump forward to third 'N'
+- `yy`, copy line
+- `p`, paste below cursor
+- `P`, paste above cursor
+- `cw`, change word
+- `3cw`, change 3 words
+- `u`, undo
+- `Ctrl-R`, redo
+- `:w`, write/save file
+- `:w!`, save file without confirmation
+- `wq! <filepath>`, save and quit to a new file path without confirmation
+- `vim -N <filename>`, using vim in new mode that is not compatible with vi, recommended!!
+- `:syntax enable`, then `:set syntax=markdown`, to enable syntax highlighting for markdown file
+- `:w !sudo tee <filename>`, is equal to `cat <filename> | sudo tee <filename>`, exclamation to execute shell command, this means editor contents are piped to file example.conf with root permissions
+- `r9`, replace next character with '9'
+- `/mysearchterm`, to locate the term and `n` to search next occurance and `N` to go back to previous occurance
+- `:set hlsearch`, to highlight search results
+- `:set incsearch`, to highlight incremental search result
+- `:%s/search/replace/gc`, % means search the current buffer, s means substitute the whole file, g means all occurrences, c means ask for confirmation on each match
+- `:set number`
+- `:cd <path>`, change working dir, files then can be opened with relative paths, TAB and arrows to autocomplete directory names
+- `:pwd`, show current working dir
+- `:set hidden`, to show hidden files
+- `:e .`, select a file in the current dir for editing
+- `V`, enter visual mode(select lines)
+- `v`, enter characterwise visual mode(select characters)
+- `y`, copy highlighted texts in visual modes
+- `d`, delete selected region in visual modes
+- `c`, delete selected text and go into insert mode
+- `:b <name>`, switch to buffer(try TAB and arrows as well)
+- `:bp`, previous buffer
+- `d2w`, the `.`, to repeat previous command
