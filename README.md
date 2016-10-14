@@ -56,4 +56,16 @@
 - `c`, delete selected text and go into insert mode
 - `:b <name>`, switch to buffer(try TAB and arrows as well)
 - `:bp`, previous buffer
+- `:bn`, next buffer
+- `:bd`, delete buffer(close file)
+- `:bf`, go to the first buffer
+- `:bl`, go to the last buffer
+- `b3`, go to buffer by number show on ls
+- `ls`, list all open buffers(files)
 - `d2w`, the `.`, to repeat previous command
+- after `:e .`, `i` (thin, long , wide or tree listings), `s` (Sort on name, time or file size), `r` (reverse sort order), `x` (view file with associated application), `d` (make dir), `D` (delete file or dir), `R` (rename the dir or file), `-` (go up a dir)
+- `gf`, jump to file under cursor
+- `:set softtabstop=2`, `:set softtabstop?`, `:set softtabstop&`, `:h softtabstop`
+- `:options`, show options doc
+- `:set`, show all options differ from default values
+- `:set filetype`
