@@ -15,3 +15,4 @@ set incsearch
 set laststatus=2
 let g:ackprg = 'ag --vimgrep'
 let g:rooter_change_directory_for_non_project_files = 'current'
+let g:go_fmt_command = "goimports"
