@@ -2,20 +2,25 @@
 - `:h search-term`, search for help
 - `:db`, or `:q` to exit help doc
 - `j`, move down a line
+- `k`, move up a line
 - `G`, go to bottom of file
 - `gg`, go to the top of the file
-- `12G`, go to line 12
+- `12G` or `12gg` go to line 12
 - `H J K L`, left, down, up and right
 - `3j`, move down 3 lines
 - `i`, insert text before cursor
 - `I`, insert mode at the start of line
 - `a`, append text after cursor
 - `o`, insert a blank line below and go into insert mode
+- `O`, insert a new line above
+- `A`, move to end of line and edit
 - `f{`, find next opening bracket
 - `d`, delete character
 - `d$`, delete through line
 - `d2w`, means delete two words
-- `c2/myname<Return>`, change text from cursor through next two occurrences of "myname"
+- `c2/myname<Return>`, change text from cursor through next two occurrences of "myname", and the deleted text is put into buffer to allow pasting
+- `x`, to delete character under cursor
+- `cc`, delete a line and insert
 - `w`, move forward by one word
 - `3w`, forward by 3 words
 - `W`, treating 'object.property' as one word and move forward
@@ -26,6 +31,7 @@
 - `2j`, down 2 lines
 - `fN`, jump forward to first 'N'
 - `3fN`, jump forward to third 'N'
+- `FN`, jump backward to first 'N'
 - `yy`, copy line
 - `p`, paste below cursor
 - `P`, paste above cursor
@@ -40,10 +46,11 @@
 - `:syntax enable`, then `:set syntax=markdown`, to enable syntax highlighting for markdown file
 - `:w !sudo tee <filename>`, is equal to `cat <filename> | sudo tee <filename>`, exclamation to execute shell command, this means editor contents are piped to file example.conf with root permissions
 - `r9`, replace next character with '9'
+- `R`, go into Replace mode
 - `/mysearchterm`, to locate the term and `n` to search next occurance and `N` to go back to previous occurance
 - `:set hlsearch`, to highlight search results
 - `:set incsearch`, to highlight incremental search result
-- `:%s/search/replace/gc`, % means search the current buffer, s means substitute the whole file, g means all occurrences, c means ask for confirmation on each match
+- `:%s/search/replace/gc`, % means search the current buffer, s means substitute the whole file, g means all occurrences, c means ask for confirmation on each match; other flags: I case-sensitive, i case-insensitive, n show number of matches, p print matching lines
 - `:set number`
 - `:cd <path>`, change working dir, files then can be opened with relative paths, TAB and arrows to autocomplete directory names
 - `:pwd`, show current working dir
@@ -69,3 +76,22 @@
 - `:options`, show options doc
 - `:set`, show all options differ from default values
 - `:set filetype`
+###Editing
+- `B`, `b`, `h` <MOVE> `l`, `w`, `W`
+- `0`, line start
+- `^`, first char
+- `e`, word end
+- `E`, code word end
+- `$`, line end
+- `M`, jump to middle of screen
+- `H`, jump to the top of the screen
+- `L`, jump to bottom of the screen
+- `:noh`, to turn off last search result highlights
+- `>>`, `<<`, `2>>`, `2<<`, indentation
+- `{`, move to start of paragraph
+- `(`, move to start of sentence
+- `}`, `)`, move to end of para and end of sentence respectively
+- `%`, bounce between parentheses, quotes and lang-specific blocks
+- `<operator><extent><object>`; <operator> could be `c`hange, `d`elete, `y`ank, `v`isual; <extent> could be `a`ll delimiters, `i`nner object; <object> could be `w`ord, `W`ord, `s`entence, `p`aragraph, `t`ag, `"'[{}]`
+- `#`(backward) or `*`(forward), search for current word under cursor
+- `:g/testing/p`, print all lines with keyword match testing, other cmd includes d delete, y yank
